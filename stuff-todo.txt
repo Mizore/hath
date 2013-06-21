@@ -1,0 +1,31 @@
+Miz:
+
+Dalek:
+
+
+Dark:
+
+
+
+Unasigned:
+
+	#1
+		HathLibraries.DataTypes.HttpServerCmd request validations.
+			For reference use java source.
+			Validation should be done in:
+				HathServer.HandleClient line 110 ( inside 'case "servercmd":' )
+
+
+	#2
+		Fix: 'Log.Trigger.HttpRequestReceived()'
+			Variable 'unixtime' is sometimes set to '0' which causes Out of range exceptions.
+		
+
+
+
+
+
+
+
+Fell free to update this list.
+If you want to assing something to yourself, simply copy second line after '#x' into your name group and commit changes.

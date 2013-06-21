@@ -1,0 +1,220 @@
+﻿<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+	<head>
+		<title>Hentai@Home client</title>
+
+		<link rel="stylesheet" type="text/css" href="/data/css/bootstrap.min" />
+		<link rel="stylesheet" type="text/css" href="/data/css/bootstrap.responsive.min" />
+		<link rel="stylesheet" type="text/css" href="/data/css/custom" />
+
+		<script type="text/javascript" src="/data/javascript/jquery.min"></script>
+		<script type="text/javascript" src="/data/javascript/bootstrap.min"></script>
+		<script type="text/javascript" src="/data/javascript/custom"></script>
+	</head>
+	<body>
+		<div class="container">
+			<div class="masthead">
+				<h3 class="muted">Hentai@Home v2.0</h3>
+				<div class="navbar">
+					<div class="navbar-inner">
+						<div class="container">
+							<ul class="nav">
+								<li class="active"><a href="#home">Home</a></li>
+								<li><a href="#info">Information</a></li>
+								<li><a href="#stats">Statistics</a></li>
+								<li><a href="#logs">Console log</a></li>
+							</ul>
+						</div>
+					</div>
+				</div>
+			</div>
+			
+			<div id="home">
+				<div class="jumbotron">
+					<h1>Hentai@Home v2.0!</h1>
+					<p class="lead">Obviously the best version out there!</p>
+				</div>
+			</div>
+			<div id="info" style="display:none;">
+				<div>
+					<h2>About project</h2>
+					<p>
+						H@H ( hentai at home or hentai@home ) is a project that can be compared to a cross between the SETI@home project and Bit Torrent.
+					</p>
+				</div>
+				<div class="seper"></div>
+				<div>
+					<h2>Goal</h2>
+					<p>Nothing here yet.</p>
+				</div>
+				<div class="seper"></div>
+				<div>
+					<h2>Development team</h2>
+					<p>
+						<table class="table table-condensed table-hover">
+							<thead>
+								<tr>
+									<th>Name</th>
+									<th>Nickname</th>
+									<th>Role</th>
+									<th>Email</th>
+									<th>Steam</th>
+								</tr>
+							</thead>
+							<tbody>
+								<tr>
+									<td>Sigitas Zelenkovas</td>
+									<td>Miz</td>
+									<td>Project leader</td>
+									<td><a href="mailto:miz@hexide.com">miz@hexide.com</a></td>
+									<td><a href="http://steamcommunity.com/id/MizChan">Miz ( 76561198010184881 )</a></td>
+								</tr>
+								<tr>
+									<td>Йордан Гигов ( Yordan Gigov )</td>
+									<td>Dalek Caan</td>
+									<td>Developer</td>
+									<td><a href="mailto:coladict@gmail.com">coladict@gmail.com</a></td>
+									<td><a href="http://steamcommunity.com/profiles/76561198043845290/">Dalek Caan ( 76561198043845290 )</a></td>
+								</tr>
+							</tbody>
+						</table>
+					</p>
+				</div>
+				<div class="seper"></div>
+				<div>
+					<h2>Special thanks</h2>
+					<p>No one. :[</p>
+				</div>
+			</div>
+			<div id="stats" style="display:none;">
+				<h2>STATS!1~~!</h2>
+				<div class="row-fluid">
+					<div class="span4">
+						<h4>Session stats</h4>
+						<table class="table table-condensed">
+							<tbody>
+								<tr>
+									<th>Http requests received</th>
+									<td id="HttpRequestsReceivedThisRun"></td>
+								</tr>
+								<tr>
+									<th>Http requests sent</th>
+									<td id="HttpRequestsSentThisRun"></td>
+								</tr>
+								<tr>
+									<th>Files received</th>
+									<td id="FilesDownloadedThisRun"></td>
+								</tr>
+								<tr>
+									<th>Files sent</th>
+									<td id="FilesUploadedThisRun"></td>
+								</tr>
+								<tr>
+									<th>Bytes received</th>
+									<td id="BytesReceivedThisRun"></td>
+								</tr>
+								<tr>
+									<th>Bytes sent</th>
+									<td id="BytesSentThisRun"></td>
+								</tr>
+							</tbody>
+						</table>
+					</div>
+					<div class="span4">
+						<h4>All time stats</h4>
+						<table class="table table-condensed">
+							<tbody>
+								<tr>
+									<th>Http requests received</th>
+									<td id="TotalHttpRequestsRevceived"></td>
+								</tr>
+								<tr>
+									<th>Http requests sent</th>
+									<td id="TotalHttpRequestsSent"></td>
+								</tr>
+								<tr>
+									<th>Files received</th>
+									<td id="TotalFilesDownloaded"></td>
+								</tr>
+								<tr>
+									<th>Files sent</th>
+									<td id="TotalFilesUploaded"></td>
+								</tr>
+								<tr>
+									<th>Bytes received</th>
+									<td id="TotalBytesReceived"></td>
+								</tr>
+								<tr>
+									<th>Bytes sent</th>
+									<td id="TotalBytesSent"></td>
+								</tr>
+							</tbody>
+						</table>
+					</div>
+					<div class="span4">
+						<h4>Other stats</h4>
+						<table class="table table-condensed">
+							<tbody>
+								<tr>
+									<th>Files in cache</th>
+									<td id="FilesInCache"></td>
+								</tr>
+								<tr>
+									<th>Space used</th>
+									<td id="UsedSpace"></td>
+								</tr>
+								<tr>
+									<th>Unregistered files</th>
+									<td id="UnregisteredFiles"></td>
+								</tr>
+								<tr>
+									<th>Last keep alive</th>
+									<td id="LastKeepAliveSecondsAgo"></td>
+								</tr>
+								<tr>
+									<th>Requests per second</th>
+									<td id="RequestsPerSecond"></td>
+								</tr>
+							</tbody>
+						</table>
+					</div>
+				</div>
+				<hr>
+				<h4>Upload speed:</h4>
+				<div class="progress progress-striped active">
+					<div id="puploada" class="bar bar-success" style="width: 0%; color: #000; white-space:nowrap;"></div>
+					<div id="puploadb" class="bar bar-warning" style="width: 0%; color: #000; white-space:nowrap;"></div>
+					<div id="puploadc" class="bar bar-danger" style="width: 0%; color: #000; white-space:nowrap;"></div>
+				</div>
+				<h4>Download speed:</h4>
+				<div class="progress progress-striped active">
+					<div id="pdownloada" class="bar bar-success" style="width: 0%; color: #000; white-space:nowrap;"></div>
+					<div id="pdownloadb" class="bar bar-warning" style="width: 0%; color: #000; white-space:nowrap;"></div>
+					<div id="pdownloadc" class="bar bar-danger" style="width: 0%; color: #000; white-space:nowrap;"></div>
+				</div>
+				
+				<hr>
+				
+				<h4>Overal network upload speed:</h4>
+				<div class="progress progress-striped active">
+					<div id="opuploada" class="bar bar-success" style="width: 0%; color: #000; white-space:nowrap;"></div>
+					<div id="opuploadb" class="bar bar-warning" style="width: 0%; color: #000; white-space:nowrap;"></div>
+					<div id="opuploadc" class="bar bar-danger" style="width: 0%; color: #000; white-space:nowrap;"></div>
+				</div>
+				<h4>Overal network download speed:</h4>
+				<div class="progress progress-striped active">
+					<div id="opdownloada" class="bar bar-success" style="width: 0%; color: #000; white-space:nowrap;"></div>
+					<div id="opdownloadb" class="bar bar-warning" style="width: 0%; color: #000; white-space:nowrap;"></div>
+					<div id="opdownloadc" class="bar bar-danger" style="width: 0%; color: #000; white-space:nowrap;"></div>
+				</div>
+			</div>
+			<div id="logs" style="display:none;">logs</div>
+			
+			<hr>
+
+			<div class="footer">
+				<p>&copy; <a href="http://hexide.com/">Hexide</a> 2013 under <a href="http://en.wikipedia.org/wiki/WTFPL">WTFPL</a></p>
+			</div>
+		</div>
+	</body>
+</html>

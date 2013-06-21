@@ -1,0 +1,215 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>8.0.30703</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{A633BE68-9030-4A6E-A188-AB3B51A815E3}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>HathLibraries</RootNamespace>
+    <AssemblyName>HathLibraries</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>..\Build\Release\</OutputPath>
+    <DefineConstants>TRACE;DEBUG;SQLITE_DEBUG TRUE WIN32 _MSC_VER NO_TCL SQLITE_ASCII SQLITE_DISABLE_LFS SQLITE_HAS_CODEC SQLITE_MEM_POOL SQLITE_MUTEX_W32 SQLITE_THREADSAFE SQLITE_OMIT_AUTHORIZATION SQLITE_OMIT_DEPRECATED SQLITE_OMIT_GET_TABLE SQLITE_OMIT_INCRBLOB SQLITE_OMIT_LOOKASIDE SQLITE_OMIT_SHARED_CACHE SQLITE_OMIT_UTF16 SQLITE_OMIT_WAL SQLITE_OS_WIN SQLITE_SYSTEM_MALLOC  VDBE_PROFILE_OFF NET_40</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <PlatformTarget>AnyCPU</PlatformTarget>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>..\Build\Release\</OutputPath>
+    <DefineConstants>TRACE;TRUE WIN32 _MSC_VER NDEBUG NO_TCL SQLITE_ASCII SQLITE_DISABLE_LFS SQLITE_ENABLE_OVERSIZE_CELL_CHECK SQLITE_MUTEX_OMIT SQLITE_OMIT_AUTHORIZATION SQLITE_OMIT_DEPRECATED SQLITE_OMIT_GET_TABLE SQLITE_OMIT_INCRBLOB SQLITE_OMIT_LOOKASIDE SQLITE_OMIT_SHARED_CACHE SQLITE_OMIT_UTF16 SQLITE_OMIT_WAL SQLITE_OS_WIN SQLITE_SYSTEM_MALLOC VDBE_PROFILE_OFF NET_40</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <AllowUnsafeBlocks>false</AllowUnsafeBlocks>
+    <PlatformTarget>x64</PlatformTarget>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Management" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Configuration.cs" />
+    <Compile Include="ContentManager.cs" />
+    <Compile Include="DatabaseHandler.cs" />
+    <Compile Include="DataTypes\class_EHApiResponse.cs" />
+    <Compile Include="DataTypes\class_EHUri.cs" />
+    <Compile Include="DataTypes\class_HttpFileServe.cs" />
+    <Compile Include="DataTypes\class_HttpRequestData.cs" />
+    <Compile Include="DataTypes\class_HttpServerCmd.cs" />
+    <Compile Include="DataTypes\class_HttpLiveResponses.cs" />
+    <Compile Include="DataTypes\class_ResourceFuncData.cs" />
+    <Compile Include="DataTypes\class_StatData.cs" />
+    <Compile Include="DataTypes\class_StringAttribute.cs" />
+    <Compile Include="DataTypes\class_UserHttpRequest.cs" />
+    <Compile Include="DataTypes\class_EHFile.cs" />
+    <Compile Include="DataTypes\enum_ApiRequestType.cs" />
+    <Compile Include="DataTypes\enum_ContentTypes.cs" />
+    <Compile Include="DataTypes\enum_EHUriType.cs" />
+    <Compile Include="DataTypes\enum_HttpResourceType.cs" />
+    <Compile Include="DataTypes\enum_HttpStatusCode.cs" />
+    <Compile Include="DataTypes\enum_LogType.cs" />
+    <Compile Include="DataTypes\enum_ServerStatus.cs" />
+    <Compile Include="DataTypes\enum_VerifyMethod.cs" />
+    <Compile Include="EHApi.cs" />
+    <Compile Include="Extentions.cs" />
+    <Compile Include="HathServer.cs" />
+    <Compile Include="Helpers.cs" />
+    <Compile Include="HttpParser\HttpParser.cs" />
+    <Compile Include="HttpParser\IHttpParserDelegate.cs" />
+    <Compile Include="HttpServer.cs" />
+    <Compile Include="IniManager.cs" />
+    <Compile Include="Logger.cs" />
+    <Compile Include="Parsers.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="ServerCore.cs" />
+    <Compile Include="Sqlite\alter_c.cs" />
+    <Compile Include="Sqlite\analyze_c.cs" />
+    <Compile Include="Sqlite\attach_c.cs" />
+    <Compile Include="Sqlite\auth_c.cs" />
+    <Compile Include="Sqlite\backup_c.cs" />
+    <Compile Include="Sqlite\bitvec_c.cs" />
+    <Compile Include="Sqlite\btmutex_c.cs" />
+    <Compile Include="Sqlite\BtreeInt_h.cs" />
+    <Compile Include="Sqlite\btree_c.cs" />
+    <Compile Include="Sqlite\Btree_h.cs" />
+    <Compile Include="Sqlite\build_c.cs" />
+    <Compile Include="Sqlite\callback_c.cs" />
+    <Compile Include="Sqlite\complete_c.cs" />
+    <Compile Include="Sqlite\crypto.cs" />
+    <Compile Include="Sqlite\ctime_c.cs" />
+    <Compile Include="Sqlite\date_c.cs" />
+    <Compile Include="Sqlite\Delegates.cs" />
+    <Compile Include="Sqlite\delete_c.cs" />
+    <Compile Include="Sqlite\expr_c.cs" />
+    <Compile Include="Sqlite\fault_c.cs" />
+    <Compile Include="Sqlite\fkey_c.cs" />
+    <Compile Include="Sqlite\func_c.cs" />
+    <Compile Include="Sqlite\global_c.cs" />
+    <Compile Include="Sqlite\hash_c.cs" />
+    <Compile Include="Sqlite\Hash_h.cs" />
+    <Compile Include="Sqlite\hwtime_c.cs" />
+    <Compile Include="Sqlite\insert_c.cs" />
+    <Compile Include="Sqlite\journal_c.cs" />
+    <Compile Include="Sqlite\keywordhash_h.cs" />
+    <Compile Include="Sqlite\legacy_c.cs" />
+    <Compile Include="Sqlite\loadext_c.cs" />
+    <Compile Include="Sqlite\main_c.cs" />
+    <Compile Include="Sqlite\malloc_c.cs" />
+    <Compile Include="Sqlite\memjournal_c.cs" />
+    <Compile Include="Sqlite\mem_Pool.cs" />
+    <Compile Include="Sqlite\mutex_c.cs" />
+    <Compile Include="Sqlite\mutex_h.cs" />
+    <Compile Include="Sqlite\mutex_noop_c.cs" />
+    <Compile Include="Sqlite\mutex_w32.cs" />
+    <Compile Include="Sqlite\notify_c.cs" />
+    <Compile Include="Sqlite\opcodes_c.cs" />
+    <Compile Include="Sqlite\opcodes_h.cs" />
+    <Compile Include="Sqlite\os_c.cs" />
+    <Compile Include="Sqlite\os_common_h.cs" />
+    <Compile Include="Sqlite\os_h.cs" />
+    <Compile Include="Sqlite\os_win_c.cs" />
+    <Compile Include="Sqlite\pager_c.cs" />
+    <Compile Include="Sqlite\pager_h.cs" />
+    <Compile Include="Sqlite\parse_c.cs" />
+    <Compile Include="Sqlite\parse_h.cs" />
+    <Compile Include="Sqlite\pcache1_c.cs" />
+    <Compile Include="Sqlite\pcache_c.cs" />
+    <Compile Include="Sqlite\pcache_h.cs" />
+    <Compile Include="Sqlite\pragma_c.cs" />
+    <Compile Include="Sqlite\prepare_c.cs" />
+    <Compile Include="Sqlite\printf_c.cs" />
+    <Compile Include="Sqlite\random_c.cs" />
+    <Compile Include="Sqlite\resolve_c.cs" />
+    <Compile Include="Sqlite\rowset_c.cs" />
+    <Compile Include="Sqlite\select_c.cs" />
+    <Compile Include="Sqlite\sqlite3_h.cs" />
+    <Compile Include="Sqlite\sqliteInt_h.cs" />
+    <Compile Include="Sqlite\sqliteLimit_h.cs" />
+    <Compile Include="Sqlite\status_c.cs" />
+    <Compile Include="Sqlite\table_c.cs" />
+    <Compile Include="Sqlite\tokenize_c.cs" />
+    <Compile Include="Sqlite\trigger_c.cs" />
+    <Compile Include="Sqlite\update_c.cs" />
+    <Compile Include="Sqlite\utf_c.cs" />
+    <Compile Include="Sqlite\util_c.cs" />
+    <Compile Include="Sqlite\vacuum_c.cs" />
+    <Compile Include="Sqlite\vdbeapi_c.cs" />
+    <Compile Include="Sqlite\vdbeaux_c.cs" />
+    <Compile Include="Sqlite\vdbeblob_c.cs" />
+    <Compile Include="Sqlite\VdbeInt_h.cs" />
+    <Compile Include="Sqlite\vdbemem_c.cs" />
+    <Compile Include="Sqlite\vdbetrace_c.cs" />
+    <Compile Include="Sqlite\vdbe_c.cs" />
+    <Compile Include="Sqlite\Vdbe_h.cs" />
+    <Compile Include="Sqlite\vtab_c.cs" />
+    <Compile Include="Sqlite\walker_c.cs" />
+    <Compile Include="Sqlite\wal_c.cs" />
+    <Compile Include="Sqlite\wal_h.cs" />
+    <Compile Include="Sqlite\where_c.cs" />
+    <Compile Include="Sqlite\_Custom.cs" />
+    <Compile Include="Properties\VersionInfo.cs" />
+    <Compile Include="Stats.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Resources\Images\" />
+    <Folder Include="Resources\Other\" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Resources.resx">
+      <Generator>PublicResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="HttpParser\rl\http.rl" />
+    <None Include="HttpParser\rl\HttpParser.cs.rl" />
+    <None Include="HttpParser\rl\uri.rl" />
+    <None Include="Resources\Icons\favicon" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Properties\version.txt" />
+    <Content Include="Resources\Http\Css\bootstrap-responsive.min.css" />
+    <Content Include="Resources\Http\Css\bootstrap.min.css" />
+    <Content Include="Resources\Http\Css\custom.css" />
+    <Content Include="Resources\Http\Images\glyphicons-halflings-white.png" />
+    <Content Include="Resources\Http\Images\glyphicons-halflings.png" />
+    <Content Include="Resources\Http\Javascript\bootstrap.min.js" />
+    <Content Include="Resources\Http\Javascript\custom.js" />
+    <Content Include="Resources\Http\Javascript\jquery-1.9.1.min.js" />
+    <Content Include="Resources\Http\stats.html" />
+    <Content Include="Resources\Text\robots.txt" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <Import Project="$(MSBuildExtensionsPath)\MSBuildCommunityTasks\MSBuild.Community.Tasks.Targets" />
+  <Target Name="BeforeBuild">
+    <Version VersionFile="Properties\version.txt" Major="1" Minor="0" BuildType="Automatic" StartDate="2013/02/21" RevisionType="BuildIncrement">
+      <Output TaskParameter="Major" PropertyName="Major" />
+      <Output TaskParameter="Minor" PropertyName="Minor" />
+      <Output TaskParameter="Build" PropertyName="Build" />
+      <Output TaskParameter="Revision" PropertyName="Revision" />
+    </Version>
+    <AssemblyInfo CodeLanguage="CS" OutputFile="Properties\VersionInfo.cs" AssemblyVersion="$(Major).$(Minor)" AssemblyFileVersion="$(Major).$(Minor).$(Build).$(Revision)" />
+  </Target>
+</Project>
